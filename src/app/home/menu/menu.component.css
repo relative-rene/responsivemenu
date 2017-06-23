@@ -1,0 +1,11 @@
+div.col-md-6 {
+  text-align: center;
+  overflow: scroll;
+  height: 400px;
+}
+
+div.col-md-6 li a {
+  font-weight: bolder;
+  font-size: 110%;
+  font-family: 'RockSalt', fantasy;
+}
