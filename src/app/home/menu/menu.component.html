@@ -3,7 +3,7 @@
     <app-carousel [interval]="NextPhotoInterval">
       <app-slide *ngFor="let slidez of slides; let index = index;" [active]="slidez.active">
         <h2 style="text-align:center;">{{slidez.text}}</h2>
-        <img [src]="slidez.image" class="img-responsive" style="width:40em; height:30em;">
+        <img [src]="slidez.image" class="img-responsive" style="width:28em; height:21em;">
       </app-slide>
     </app-carousel>
   </div>
