@@ -21,7 +21,7 @@ import { InfoComponent } from './contact-us/info/info.component';
 import { MapComponent } from './map/map.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 
-import { MessageService } from './contact-us/message.service';
+import { MessageService } from './_services/message.service';
 
 
 
