@@ -7,13 +7,16 @@
       </app-slide>
     </app-carousel>
   </div>
-  <div class="col-lg-6 col-md-6">
-    <ul class="nav nav-tabs nav-justified">
+  <div height="400px" (scroll)="onWindowScroll(e)" class="col-lg-6 col-md-6">
+  <header class="header">
+    <ul class="content nav nav-tabs nav-justified">
       <li ><a routerLink='/small-dishes'>Small Dishes</a></li>
       <li role="presentation"><a routerLink='/brunch'>Brunch</a></li>
       <li role="presentation"><a routerLink='/entrees'>Entrees</a></li>
       <li role="presentation"><a routerLink='/sides'>Sides</a></li>
     </ul>
+  </header>
+
     <router-outlet></router-outlet>
   </div>
 </div>

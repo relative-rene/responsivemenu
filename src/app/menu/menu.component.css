@@ -1,7 +1,5 @@
 div.col-md-6 {
   text-align: center;
-  overflow: scroll;
-  height: 400px;
 }
 
 div.col-md-6 li a {

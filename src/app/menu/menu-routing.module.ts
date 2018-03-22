@@ -7,7 +7,6 @@ import { EntreesComponent } from './entrees/entrees.component';
 import { SidesComponent } from './sides/sides.component';
 import { SmallDishesComponent } from './small-dishes/small-dishes.component';
 
-
 const menuRoutes: Routes = [
   { path: '', component: MenuComponent, children: [
   { path: 'brunch', component: BrunchComponent },

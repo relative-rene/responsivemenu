@@ -31,15 +31,26 @@ export class MenuComponent {
     this.slides.pop();
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    let number = this.document.body.scrollTop;
-    if (number > 100) {
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event) {
+    const number = $event.target.scrollTop;
+    if (number > 40) {
       this.navIsFixed = true;
     } else if (this.navIsFixed && number < 10) {
       this.navIsFixed = false;
     }
   }
+
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //   console.log('working scroll ');
+  //   let number = this.document.body.scrollTop;
+  //   if (number > 100) {
+  //     this.navIsFixed = true;
+  //   } else if (this.navIsFixed && number < 10) {
+  //     this.navIsFixed = false;
+  //   }
+  // }
 
   constructor( @Inject(DOCUMENT) private document: any) {
     this.addNewSlide();
