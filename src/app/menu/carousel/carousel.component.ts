@@ -6,8 +6,7 @@ export enum Direction {UNKNOWN, NEXT, PREV}
 
 @Component({
   selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css']
+  templateUrl: './carousel.component.html'
 })
 
 export class CarouselComponent implements OnDestroy {

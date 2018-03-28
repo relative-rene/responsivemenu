@@ -4,17 +4,18 @@
     <img [src]="jumbotronPath" class="img-responsive" style="min-width:100%;" alt="notTheOcean">
   </div>
 </div>
+
 <nav class="navbar navbar-inverse">
   <div class="container">
     <ul class="nav nav-tabs nav-justified">
       <li><a routerLink="/menu">Menu</a></li>
-      <li><a routerLink="googleLink()">Directions</a></li>
+      <li><a (click)="googleLink()">Directions</a></li>
       <li><a routerLink="/footer">Info</a></li>
       <li><a routerLink="/contact-us">Contact Us</a></li>
     </ul>
   </div>
 </nav>
     <router-outlet></router-outlet>
-    <footer class="page-footer">
+<footer class="page-footer">
     <p>Made by relative-rene &copy; 2017</p>
 </footer>

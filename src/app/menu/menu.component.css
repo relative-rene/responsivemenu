@@ -7,3 +7,16 @@ div.col-md-6 li a {
   font-size: 110%;
   font-family: 'RockSalt', fantasy;
 }
+
+app-slide+h2 {
+  text-align:center;
+}
+app-slide+h2+img.image-responsive{
+  width:28em;
+  height:21em;
+}
+
+section.menu-wrapper {
+height:25em;
+overflow-y: scroll;
+}

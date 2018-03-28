@@ -1,22 +1,21 @@
-<div class="row">
+<section class="menu-wrapper row">
   <div class="col-lg-6 col-md-6">
     <app-carousel [interval]="NextPhotoInterval">
       <app-slide *ngFor="let slidez of slides; let index = index;" [active]="slidez.active">
-        <h2 style="text-align:center;">{{slidez.text}}</h2>
-        <img [src]="slidez.image" class="img-responsive" style="width:28em; height:21em;">
+        <h2>{{slidez.text}}</h2>
+        <img [src]="slidez.image" class="img-responsive">
       </app-slide>
     </app-carousel>
   </div>
-  <div height="400px" (scroll)="onWindowScroll(e)" class="col-lg-6 col-md-6">
-  <header class="header">
-    <ul class="content nav nav-tabs nav-justified">
-      <li ><a routerLink='/small-dishes'>Small Dishes</a></li>
-      <li role="presentation"><a routerLink='/brunch'>Brunch</a></li>
-      <li role="presentation"><a routerLink='/entrees'>Entrees</a></li>
-      <li role="presentation"><a routerLink='/sides'>Sides</a></li>
-    </ul>
-  </header>
-
+  <div class="col-lg-6 col-md-6">
+    <header class="header" [attr.style.fixed]="navIsFixed"(scroll)="onWindowScroll(e)">
+      <ul class="content nav nav-tabs nav-justified">
+        <li role="presentation"><a routerLink='/small-dishes'>Small Dishes</a></li>
+        <li role="presentation"><a routerLink='/brunch'>Brunch</a></li>
+        <li role="presentation"><a routerLink='/entrees'>Entrees</a></li>
+        <li role="presentation"><a routerLink='/sides'>Sides</a></li>
+      </ul>
+    </header>
     <router-outlet></router-outlet>
   </div>
-</div>
+</section>

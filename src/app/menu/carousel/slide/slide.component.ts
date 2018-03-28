@@ -4,8 +4,7 @@ import { CarouselComponent, Direction} from '../carousel.component';
 
 @Component({
   selector: 'app-slide',
-  templateUrl: './slide.component.html',
-  styleUrls: ['./slide.component.css']
+  templateUrl: './slide.component.html'
 })
 export class SlideComponent implements OnInit, OnDestroy {
   @Input() public index: number;
