@@ -1,51 +1,86 @@
-html, body, h1, h2, h3, h4, h5, p, ol, ul, li, a {
-  ! padding: 0;
-  ! border: 0;
-  font-family: "RockSalt", fantasy;
+/* Remove padding and margin  */
+*  
+    { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    font-family: 'RockSalt', fantasy;    
+ 
 }
 
-@font-face {
-  font-family: "RockSalt";
-  src: url('https://fonts.googleapis.com/css?family=Rock+Salt');
+body 
+    { 
+    font: 62.5%/1.5 "RockSalt", Tahoma, Verdana, sans-serif; 
+    color:red;     
+    text-align:center; 
+} 
+
+#wrapper 
+    {
+    text-align:center;
+    margin:0 auto;
+    padding:0;  
+    background-color: #FFFFFF; 
 }
 
-div.jumbo {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+h1 
+    { 
+    font-size: 2.2em; 
+} 
 
-h1#title span {
-  font-family: "RockSalt", cursive;
-  font-size: 2em;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+h2 
+    { 
+    font-size: 2.0em;     
+} 
 
-app-slide img {
-  height: 300px;
-  width: 60%;
-  margin: 0 auto;
-}
-nav.navbar-inverse {
-  font-size: 1.5em;
-  font-weight:800;
-}
+h3 
+    { 
+    font-size: 1.8em; 
+} 
 
-footer.page-footer {
-  padding-top: 3em;
-  margin: 1em;
-}
+h4 
+    { 
+    font-size: 1.6em;     
+} 
 
+h5 
+    { 
+    font-size: 1.4em;     
+} 
 
-
-/*
-Future imports
-font-family: "Gotham Thin";
-font-family: "Gotham Light";
-font-family: "Gotham Book";
-font-family: "Gotham Bold";
-font-family:"HelveticaNeueBold";
-font-family: "HelveticaNeueLight";*/
+p 
+    { 
+    font-size: 1.2em;     
+}  
+  p#title {
+    /* font-family: "RockSalt", cursive; */
+    font-size: 4em;
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+  #image {
+      max-width:100%;
+  }
+  
+  app-slide img {
+    height: 300px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  nav.navbar-inverse {
+    font-size: 1.5em;
+    font-weight:800;
+  }
+  
+  footer.page-footer {
+    padding-top: 3em;
+    margin: 1em;
+  }
+  
+/* Menu */
+.sebm-google-map-container {
+    height: 300px;
+  }
+  
