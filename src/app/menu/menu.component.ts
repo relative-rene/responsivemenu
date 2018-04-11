@@ -5,8 +5,7 @@ import { SlideComponent } from './carousel/slide/slide.component';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  templateUrl: './menu.component.html'
 })
 export class MenuComponent {
   public navIsFixed = false;
@@ -31,15 +30,15 @@ export class MenuComponent {
     this.slides.pop();
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll($event) {
-    const number = $event.target.documentElement.scrollTop;
-    if (number > 730) {
-      this.navIsFixed = true;
-    } else if (this.navIsFixed && number < 10) {
-      this.navIsFixed = false;
-    }
-  }
+  // @HostListener('window:scroll', ['$event'])
+  //   onWindowScroll($event) {
+  //     const number = $event.target.documentElement.scrollTop;
+  //     if (number > 730) {
+  //       this.navIsFixed = true;
+  //     } else if (this.navIsFixed && number < 10) {
+  //       this.navIsFixed = false;
+  //     }
+  //   }
 
   constructor( @Inject(DOCUMENT) private document: any) {
     this.addNewSlide();

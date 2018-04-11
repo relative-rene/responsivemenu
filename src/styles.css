@@ -1,86 +1,162 @@
-/* Remove padding and margin  */
-*  
-    { 
+/* Set Default  */
+
+* 
+{
+    font-family: 'RockSalt', fantasy;
+    color: rgba(51,51,51, .8);
     margin: 0; 
-    padding: 0; 
-    border: 0;
-    font-family: 'RockSalt', fantasy;    
- 
+    padding: 0;
 }
 
-body 
-    { 
-    font: 62.5%/1.5 "RockSalt", Tahoma, Verdana, sans-serif; 
-    color:red;     
-    text-align:center; 
-} 
-
-#wrapper 
-    {
-    text-align:center;
-    margin:0 auto;
-    padding:0;  
-    background-color: #FFFFFF; 
+body, html {
+    height: 100%;
 }
 
-h1 
-    { 
-    font-size: 2.2em; 
-} 
-
-h2 
-    { 
-    font-size: 2.0em;     
-} 
-
-h3 
-    { 
-    font-size: 1.8em; 
-} 
-
-h4 
-    { 
-    font-size: 1.6em;     
-} 
-
-h5 
-    { 
-    font-size: 1.4em;     
-} 
-
-p 
-    { 
-    font-size: 1.2em;     
-}  
-  p#title {
-    /* font-family: "RockSalt", cursive; */
+header#title>p
+{
     font-size: 4em;
+    text-align: center;
+    color: rgba(51,51,51, 1);
+}
+
+header#menu-title 
+{
+    font-family: 'RockSalt', cursive;
+    font-weight: 900;
+    color: rgba(51,51,51, 1);
+
+}
+
+div.bkg-image 
+{
+    position: relative;
+    background: no-repeat url('/assets/skyNwater.jpg');
+    top: 0;
+    border-bottom: 4em solid #283018;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a.visible-xs.navbar-brand 
+{
+    color:#f0eceb;
+}
+
+h1#caption 
+{
+    left: 0;
     position: absolute;
-    left: 45%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-  }
-  #image {
-      max-width:100%;
-  }
-  
-  app-slide img {
-    height: 300px;
-    width: 60%;
+    text-align: center;
+    top: 140px;
+    transition: top 3s, left 3s;
+    width: 100%;
+    font-family: 'RockSalt', cursive;
+    color: rgba(51,51,51, .9);
+
+}
+
+nav.navbar.navbar-inverse 
+{
+    float:left;
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 1.8em;
+    font-weight: 800;
+    /* overflow: hidden; */
+    margin: 0;
+    background-color: #aa863a;
+    border: 1px inset #f0eceb;
+    opacity:1;
+    z-index:999;
+}
+
+a#nav-label 
+{ 
+    color:#f0eceb;
+}
+
+a#nav-label:hover, a#nav-label:active, a#nav-label:focus 
+{
+    color:#f0eceb;
+    background-color: #729f98;
+}
+
+.sticky 
+{
+    position: fixed !important;
+    top: 0;
+    transition: top 3s;
+    width: 100%;
+}
+
+main#content, div#main-content
+{
+    height: 460px;
+}
+
+.sticky + #content 
+{
+    padding-top: 90;
+}
+
+
+img.img-responsive
+{
+    height: 350px;
     margin: 0 auto;
-  }
-  nav.navbar-inverse {
-    font-size: 1.5em;
-    font-weight:800;
-  }
-  
-  footer.page-footer {
-    padding-top: 3em;
-    margin: 1em;
-  }
-  
+    width: 340px;
+    padding: 15px 15px 40px 15px;
+    border: 1px solid rgba(51,51,51,.4);
+    background-color: #f0eceb;
+    box-shadow: 5px 14px 10px #aaaaaa;
+}
+
+
+h2.dish-name 
+{
+    text-align: center;
+    color: rgba(51,51,51, .9);
+    padding-top: 1em;
+}
+
+h2#mealtime 
+{
+    color:rgba(51,51,51, 1);
+    font-size:1.5em;
+}
+
+
 /* Menu */
-.sebm-google-map-container {
+.sebm-google-map-container 
+{
     height: 300px;
+    padding: 1em;
+    margin: .5em;
+}  
+
+div.menu-options 
+{
+    height: 440px;
+    overflow-y: scroll;
+    text-align: center;
+
+}
+
+#item-name 
+{
+    text-align: left;
+    font-family: 'RockSalt', cursive;
+    font-size: 1.2em;
+}
+
+@keyframes slideDown {
+    from { top: 0; }
+    to   { top: 480px; }
   }
-  

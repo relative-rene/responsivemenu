@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import { Message } from 'app/_interfaces/message.model';
+import { Message } from 'app/_models/message.model';
 
 export class MessageService {
   messagesChanged = new Subject<Message[]>();
