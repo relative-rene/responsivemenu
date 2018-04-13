@@ -2,15 +2,25 @@
   <header id="title">
     <p>Neptunes</p>
   </header>
+  <div #sideNav id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav(sideNav, navMenu)">&times;</a>
+    <a href="#">Menu</a>
+    <a href="#">Directions</a>
+    <a href="#">Info</a>
+    <a href="#">Contact Us</a>
+  </div>
 
-  <nav id="nav-menu" [ngClass]="{sticky: navIsFixed}" class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  <nav #navMenu id="nav-menu" [ngClass]="{sticky: navIsFixed}" class="navbar navbar-inverse">
+    <button type="button" class="navbar-toggle" (click)="openNav(sideNav, navMenu)">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
+
     </button>
-    <a class="visible-xs navbar-brand">Neptunes</a>
+    <a class="visible-xs navbar-brand">relative-rene
+      <i class="devicon-github-plain-wordmark"></i>
+    </a>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul (click)="scrollDown(menu)" class="nav nav-justified">
         <li>
@@ -29,6 +39,7 @@
     </div>
   </nav>
 </div>
+
 <main #menu class="content">
   <router-outlet></router-outlet>
 </main>

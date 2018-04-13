@@ -12,7 +12,7 @@ body, html {
     height: 100%;
 }
 
-header#title>p
+header#title
 {
     font-size: 4em;
     text-align: center;
@@ -41,11 +41,16 @@ div.bkg-image
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index:2;
 }
 
 a.visible-xs.navbar-brand 
 {
     color:#f0eceb;
+}
+
+div#myNavbar {
+      z-index: 99;
 }
 
 h1#caption 
@@ -61,7 +66,7 @@ h1#caption
 
 }
 
-nav.navbar.navbar-inverse 
+nav.navbar-inverse
 {
     float:left;
     display: block;
@@ -69,12 +74,11 @@ nav.navbar.navbar-inverse
     height: 60px;
     font-size: 1.8em;
     font-weight: 800;
-    /* overflow: hidden; */
     margin: 0;
     background-color: #aa863a;
     border: 1px inset #f0eceb;
     opacity:1;
-    z-index:999;
+    z-index:3;
 }
 
 a#nav-label 
@@ -99,13 +103,20 @@ a#nav-label:hover, a#nav-label:active, a#nav-label:focus
 main#content, div#main-content
 {
     height: 460px;
+    padding: .5em;
+    margin: .5em;
 }
 
 .sticky + #content 
 {
     padding-top: 90;
 }
-
+i.devicon-github-plain-wordmark 
+{
+    color: #f0eceb;
+    padding: 0 .3em;
+    font-size: 2em;
+}
 
 img.img-responsive
 {
@@ -146,7 +157,6 @@ div.menu-options
     height: 440px;
     overflow-y: scroll;
     text-align: center;
-
 }
 
 #item-name 
@@ -156,7 +166,48 @@ div.menu-options
     font-size: 1.2em;
 }
 
-@keyframes slideDown {
-    from { top: 0; }
-    to   { top: 480px; }
-  }
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #aa863a;
+    border: 1px inset #f0eceb;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f0eceb;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav a.closebtn {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 36px;
+    padding:0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
