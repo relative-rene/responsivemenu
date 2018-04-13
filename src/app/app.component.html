@@ -3,43 +3,42 @@
     <p>Neptunes</p>
   </header>
   <div #sideNav id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav(sideNav, navMenu)">&times;</a>
-    <a href="#">Menu</a>
-    <a href="#">Directions</a>
-    <a href="#">Info</a>
-    <a href="#">Contact Us</a>
+    <a class="closebtn" (click)="closeNav(sideNav, navMenu)">&times;</a>
+    <a routerLink="/menu">Menu</a>
+    <a (click)="googleLink()">Directions</a>
+    <a routerLink="/info">Info</a>
+    <a routerLink="/contact-us">Contact Us</a>
   </div>
 
-  <nav #navMenu id="nav-menu" [ngClass]="{sticky: navIsFixed}" class="navbar navbar-inverse">
-    <button type="button" class="navbar-toggle" (click)="openNav(sideNav, navMenu)">
+  <nav #navMenu id="hamburger-nav" [ngClass]="{sticky: navIsFixed}" class="navbar navbar-inverse">
+    <button type="button" class="navbar-toggle" id="openNavButton" (click)="openNav(sideNav, navMenu)">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-
     </button>
     <a class="visible-xs navbar-brand">relative-rene
       <i class="devicon-github-plain-wordmark"></i>
     </a>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul (click)="scrollDown(menu)" class="nav nav-justified">
+      <ul (click)="viewJump(content)" class="nav nav-justified">
         <li>
-          <a id="nav-label" routerLink="/menu">Menu</a>
+          <a id="nav-menu" routerLink="/menu">Menu</a>
         </li>
         <li>
-          <a id="nav-label" (click)="googleLink()">Directions</a>
+          <a id="nav-directions" (click)="googleLink()">Directions</a>
         </li>
         <li>
-          <a id="nav-label" routerLink="/info">Info</a>
+          <a id="nav-info" routerLink="/info">Info</a>
         </li>
         <li>
-          <a id="nav-label" routerLink="/contact-us">Contact Us</a>
+          <a id="nav-contact-us" routerLink="/contact-us">Contact Us</a>
         </li>
       </ul>
     </div>
   </nav>
 </div>
 
-<main #menu class="content">
+<main #content class="content">
   <router-outlet></router-outlet>
 </main>

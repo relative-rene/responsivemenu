@@ -13,7 +13,6 @@ export class CarouselComponent implements OnDestroy {
   @Input() public noWrap: boolean;
   @Input() public noPause: boolean;
   @Input() public noTransition: boolean;
-
   @Input() public get interval(): number {
     return this._interval;
   }

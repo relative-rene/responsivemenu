@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InfoComponent } from './info.component';
+import { AgmCoreModule, MapsAPILoader } from '@agm/core';
+import { MapComponent } from '../cmpmap/map.component';
 
 describe('InfoComponent', () => {
   let component: InfoComponent;
@@ -8,7 +9,9 @@ describe('InfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InfoComponent ]
+      declarations: [ InfoComponent, MapComponent ],
+      imports: [AgmCoreModule],
+      providers:[MapsAPILoader],
     })
     .compileComponents();
   }));
@@ -16,10 +19,10 @@ describe('InfoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(InfoComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    component.ngOnInit();
+    expect(component).toBeDefined();
   });
 });

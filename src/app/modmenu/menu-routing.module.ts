@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MenuComponent } from './menu.component';
-import { BrunchComponent} from './brunch/brunch.component';
-import { EntreesComponent } from './entrees/entrees.component';
-import { SidesComponent } from './sides/sides.component';
-import { SmallDishesComponent } from './small-dishes/small-dishes.component';
+import { BrunchComponent} from './cmpbrunch/brunch.component';
+import { EntreesComponent } from './cmpentrees/entrees.component';
+import { SidesComponent } from './cmpsides/sides.component';
+import { SmallDishesComponent } from './cmpsmall-dishes/small-dishes.component';
 
 const menuRoutes: Routes = [
   { path: '', component: MenuComponent, children: [

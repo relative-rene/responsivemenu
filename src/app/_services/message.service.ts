@@ -14,6 +14,7 @@ export class MessageService {
     this.messagesChanged.next(this.messages.slice());
   }
 
+  
   getMessages() {
     return this.messages.slice();
   }

@@ -5,16 +5,16 @@ import { AgmCoreModule } from '@agm/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
-import { MenuModule } from './menu/menu.module';
+import { MenuModule } from './modmenu/menu.module';
 
 import { AppComponent } from './app.component';
 
-import { InfoComponent } from './info/info.component';
-import { MapComponent } from './map/map.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { InfoComponent } from './cmpinfo/info.component';
+import { MapComponent } from './cmpmap/map.component';
+import { ContactUsComponent } from './cmpcontact-us/contact-us.component';
 import { MessageService } from './_services/message.service';
 import { DrinksService } from './_services/drinks.service';
-
+import { GOOGLE_MAP_KEY } from 'secret-constants';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { DrinksService } from './_services/drinks.service';
     MenuModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBWZSPWwSlUyymW8yy3zrrcemAUC6e2NrY'
+      apiKey: GOOGLE_MAP_KEY
     })
   ],
   declarations: [
