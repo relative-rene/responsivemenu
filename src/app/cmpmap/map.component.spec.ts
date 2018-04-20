@@ -15,7 +15,7 @@ describe('MapComponent', () => {
             expect(component.zoom).toBeUndefined();
 
             // Action
-            component.ngOnIt();
+            component.ngOnInit();
 
             // Assert
             expect(component.lat).toBeDefined();
