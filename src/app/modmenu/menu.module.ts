@@ -11,14 +11,13 @@ import { SlideComponent } from './cmpcarousel/slide/slide.component';
 @NgModule({
   imports:[MenuRoutingModule, CommonModule],
   declarations:[
+    MenuComponent,
     SmallDishesComponent,
     SidesComponent,
     EntreesComponent,
     BrunchComponent,
-    MenuComponent,
     CarouselComponent,
-    SlideComponent,
+    SlideComponent
   ],
-  providers:[]
 })
 export class MenuModule { }

@@ -6,7 +6,7 @@ describe('SmallDishesComponent', ()=> {
         component = new SmallDishesComponent();
     })
 
-    it('should create SmallDishesComponent',()=> {
+    it('should create SmallDishesComponent', ()=> {
         expect(component).toBeDefined();
     })
 });

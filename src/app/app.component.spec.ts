@@ -81,7 +81,7 @@ describe('AppComponent', () => {
 
     it('viewJump, should scroll down to main content', () => {
         // Arrange
-        let menu = fixture.debugElement.nativeElement.querySelector('main.content');
+        let menu = fixture.debugElement.nativeElement.querySelector('main#content');
         spyOn(menu , 'scrollIntoView');
         expect(menu.scrollIntoView).not.toHaveBeenCalled();
 
@@ -94,9 +94,9 @@ describe('AppComponent', () => {
    it('openNav, should collapse navMenu and expand sideNav', () => {
         // Arrange
         const navMenu = fixture.debugElement.nativeElement.querySelector('nav#hamburger-nav');
-        const sideNav = fixture.debugElement.nativeElement.querySelector('div#mySidenav');
+        const sideNav = fixture.debugElement.nativeElement.querySelector('div#sideNav');
         const navStyle = fixture.debugElement.query(By.css('nav#hamburger-nav')).nativeElement.style;
-        const sideStyle = fixture.debugElement.query(By.css('div#mySidenav')).nativeElement.style;
+        const sideStyle = fixture.debugElement.query(By.css('div#sideNav')).nativeElement.style;
 
         expect(navStyle['visibility']).toEqual('')
         expect(sideStyle['width']).toEqual('');
@@ -113,9 +113,9 @@ describe('AppComponent', () => {
    it('closeNav, should close sideNav and expand navMenu', () => {
        // Arrange
         const navMenu = fixture.debugElement.nativeElement.querySelector('nav#hamburger-nav');
-        const sideNav = fixture.debugElement.nativeElement.querySelector('div#mySidenav');
+        const sideNav = fixture.debugElement.nativeElement.querySelector('div#sideNav');
         const navStyle = fixture.debugElement.query(By.css('nav#hamburger-nav')).nativeElement.style;
-        const sideStyle = fixture.debugElement.query(By.css('div#mySidenav')).nativeElement.style;
+        const sideStyle = fixture.debugElement.query(By.css('div#sideNav')).nativeElement.style;
         jasmine.clock().install();
         app.openNav(sideNav, navMenu);
 

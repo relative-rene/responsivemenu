@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import { Message } from 'app/_models/message.model';
+import { Message } from '../_models/message.model';
 
+/**
+ * Service controls state management of form
+ */
 export class MessageService {
   messagesChanged = new Subject<Message[]>();
 

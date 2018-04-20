@@ -1,5 +1,4 @@
 /* Set Default  */
-
 * 
 {
     font-family: 'RockSalt', fantasy;
@@ -8,7 +7,8 @@
     padding: 0;
 }
 
-body, html {
+body, html
+{
     height: 100%;
 }
 
@@ -33,40 +33,19 @@ div.bkg-image
     background: no-repeat url('/assets/skyNwater.jpg');
     top: 0;
     border-bottom: 4em solid #283018;
-
-    /* Full height */
     height: 100%; 
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index:2;
 }
 
-a.visible-xs.navbar-brand 
+div#myNavbar 
 {
-    color:#f0eceb;
+      z-index: 9;
 }
 
-div#myNavbar {
-      z-index: 99;
-}
-
-h1#caption 
-{
-    left: 0;
-    position: absolute;
-    text-align: center;
-    top: 140px;
-    transition: top 3s, left 3s;
-    width: 100%;
-    font-family: 'RockSalt', cursive;
-    color: rgba(51,51,51, .9);
-
-}
-
-nav.navbar-inverse
+nav#hamburger-nav 
 {
     float:left;
     display: block;
@@ -80,8 +59,7 @@ nav.navbar-inverse
     opacity:1;
     z-index:3;
 }
-
-a#nav-label 
+a.visible-xs.navbar-brand, a#nav-label
 { 
     color:#f0eceb;
 }
@@ -111,7 +89,8 @@ main#content, div#main-content
 {
     padding-top: 90;
 }
-i.devicon-github-plain-wordmark 
+
+i.devicon-github-plain-wordmark
 {
     color: #f0eceb;
     padding: 0 .3em;
@@ -143,8 +122,6 @@ h2#mealtime
     font-size:1.5em;
 }
 
-
-/* Menu */
 .sebm-google-map-container 
 {
     height: 300px;
@@ -159,31 +136,30 @@ div.menu-options
     text-align: center;
 }
 
-#item-name 
+h5#item-name 
 {
     text-align: left;
     font-family: 'RockSalt', cursive;
     font-size: 1.2em;
 }
 
-
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+#sideNav 
+{
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0;
     right: 0;
     background-color: #aa863a;
     border: 1px inset #f0eceb;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
 }
 
-/* The navigation menu links */
-.sidenav a {
+#sideNav a 
+{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -192,13 +168,13 @@ div.menu-options
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+#sideNav a:hover 
+{
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav a.closebtn {
+#sideNav a.closebtn 
+{
     position: absolute;
     top: 0;
     left: 5px;
@@ -206,8 +182,8 @@ div.menu-options
     padding:0px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+@media screen and (max-height: 450px) 
+{
+    #sideNav {padding-top: 15px;}
+    #sideNav a {font-size: 18px;}
 }

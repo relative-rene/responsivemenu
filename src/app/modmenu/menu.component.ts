@@ -1,7 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
-// import { CarouselComponent } from './carousel/carousel.component';
-// import { SlideComponent } from './carousel/slide/slide.component';
 
 @Component({
   selector: 'app-menu',
@@ -20,9 +18,7 @@ export class MenuComponent implements OnInit{
   ngOnInit() {
     this.addNewSlide();
   }
-  /**
-   * Private function controls collection of slides to be displayed
-   */
+
   private addNewSlide() {
     this.slides.push(
       { image: './assets/spammasubi.jpg', text: 'Spammasubi' },

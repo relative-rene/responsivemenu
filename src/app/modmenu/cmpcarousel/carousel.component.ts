@@ -1,8 +1,7 @@
-import { Component, OnDestroy, Input} from '@angular/core';
+import { Component, OnDestroy, Input } from '@angular/core';
 import { SlideComponent } from './slide/slide.component';
 
-export enum Direction {UNKNOWN, NEXT, PREV}
-
+export enum Direction { UNKNOWN, NEXT, PREV }
 
 @Component({
   selector: 'app-carousel',
@@ -16,12 +15,6 @@ export class CarouselComponent implements OnDestroy {
   @Input() public get interval(): number {
     return this._interval;
   }
-
-  public set interval(value: number) {
-    this._interval = value;
-    this.restartTimer();
-  }
-
   private slides: Array<SlideComponent> = [];
   private currentInterval: any;
   private isPlaying: boolean;
@@ -29,10 +22,23 @@ export class CarouselComponent implements OnDestroy {
   private currentSlide: SlideComponent;
   private _interval: number;
 
+  public set interval(value: number) {
+    this._interval = value;
+    this.restartTimer();
+  }
+
+  /**
+   * LifeCycle Hook executes goNext private function when component is destroyed
+   */
   public ngOnDestroy() {
     this.destroyed = true;
   }
 
+  /**
+   * Helper function centralizes whether NEXT or PREVIOUS slide will be displayed
+   * @param nextSlide 
+   * @param direction 
+   */
   public select(nextSlide: SlideComponent, direction: Direction = Direction.UNKNOWN) {
     let nextIndex = nextSlide.index;
     if (direction === Direction.UNKNOWN) {
@@ -42,6 +48,59 @@ export class CarouselComponent implements OnDestroy {
     // Prevent this user-triggered transition from occurring if there is already one in progress
     if (nextSlide && nextSlide !== this.currentSlide) {
       this.goNext(nextSlide, direction);
+    }
+  }
+  /**
+   * Helper function toggles private isPlaying boolean
+   */
+  public play() {
+    if (!this.isPlaying) {
+      this.isPlaying = true;
+      this.restartTimer();
+    }
+  }
+
+  /**
+   * Helper function toggles private isPlaying boolean
+   */
+  public pause() {
+    if (!this.noPause) {
+      this.isPlaying = false;
+      this.resetTimer();
+    }
+  }
+
+  /**
+   * Helper function used to manipulate carousel component
+   * @param slide 
+   */
+  public addSlide(slide: SlideComponent) {
+    slide.index = this.slides.length;
+    this.slides.push(slide);
+    if (this.slides.length === 1 || slide.active) {
+      this.select(this.slides[this.slides.length - 1]);
+      if (this.slides.length === 1) {
+        this.play();
+      }
+    } else {
+      slide.active = false;
+    }
+  }
+
+  /**
+   * Helper function used to manipulate carousel component
+   * @param slide 
+   */
+  public removeSlide(slide: SlideComponent) {
+    this.slides.splice(slide.index, 1);
+
+    if (this.slides.length === 0) {
+      this.currentSlide = null;
+      return;
+    }
+
+    for (let i = 0; i < this.slides.length; i++) {
+      this.slides[i].index = i;
     }
   }
 
@@ -59,8 +118,6 @@ export class CarouselComponent implements OnDestroy {
     }
 
     this.currentSlide = slide;
-
-    // every time you change slides, reset the timer
     this.restartTimer();
   }
 
@@ -118,46 +175,6 @@ export class CarouselComponent implements OnDestroy {
     if (this.currentInterval) {
       clearInterval(this.currentInterval);
       this.currentInterval = null;
-    }
-  }
-
-  public play() {
-    if (!this.isPlaying) {
-      this.isPlaying = true;
-      this.restartTimer();
-    }
-  }
-
-  public pause() {
-    if (!this.noPause) {
-      this.isPlaying = false;
-      this.resetTimer();
-    }
-  }
-
-  public addSlide(slide: SlideComponent) {
-    slide.index = this.slides.length;
-    this.slides.push(slide);
-    if (this.slides.length === 1 || slide.active) {
-      this.select(this.slides[this.slides.length - 1]);
-      if (this.slides.length === 1) {
-        this.play();
-      }
-    } else {
-      slide.active = false;
-    }
-  }
-
-  public removeSlide(slide: SlideComponent) {
-    this.slides.splice(slide.index, 1);
-
-    if (this.slides.length === 0) {
-      this.currentSlide = null;
-      return;
-    }
-
-    for (let i = 0; i < this.slides.length; i++) {
-      this.slides[i].index = i;
     }
   }
 }

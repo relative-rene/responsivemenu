@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MessageService } from 'app/_services/message.service';
+import { MessageService } from '../_services/message.service';
 
 
 @Component({
@@ -10,14 +10,10 @@ import { MessageService } from 'app/_services/message.service';
 })
 
 export class ContactUsComponent implements OnInit {
-  public id: number;
   public messageForm: FormGroup;
-
+  
   constructor(
-    // private route: ActivatedRoute,
-    private messageService: MessageService,
-    // private router: Router
-  ) { }
+    private messageService: MessageService) { }
 
   /**
    * Lifecycle hook creates component form
@@ -31,13 +27,9 @@ export class ContactUsComponent implements OnInit {
    */
   onSubmit() {
     this.messageService.addMessage(this.messageForm.value);
-    console.log('message added', this.messageForm.value, this.id);
     this.initForm();
   }
 
-  /**
-   * Private Function creates Message Form Group
-   */
   private initForm() {
     let messageEmail = '';
     let messageDescription = '';

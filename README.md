@@ -1,20 +1,20 @@
 # Responsive Menu
 
 This project was initiated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+Built SPA with Angular4 component based architecture.
+TDD unit testing with angular-cli testing suite.
+Integrated Google Maps API
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` or `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Further Development 
+Offer offline capabilities via serviceworkers.
+Expand Contact-Us component to register users for mailing list.
+Build a natural language processing bot to answer FAQ.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further Development
-
-1- Consolidate application style sheets. Currently css files are in components, scaling project would remove said files and organize style sheets by elements

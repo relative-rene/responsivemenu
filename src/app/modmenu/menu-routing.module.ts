@@ -18,7 +18,7 @@ const menuRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(menuRoutes)
+    RouterModule.forChild(menuRoutes)
   ],
   exports: [RouterModule]
 })
