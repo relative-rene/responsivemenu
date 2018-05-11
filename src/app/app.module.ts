@@ -14,7 +14,7 @@ import { MapComponent } from './cmpmap/map.component';
 import { ContactUsComponent } from './cmpcontact-us/contact-us.component';
 import { MessageService } from './_services/message.service';
 import { DrinksService } from './_services/drinks.service';
-import { GOOGLE_MAP_KEY } from '../constants';
+import { GOOGLE_MAP_KEY } from './constants/variables';
 
 
 @NgModule({
