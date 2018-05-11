@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
@@ -8,7 +9,7 @@ export class AppComponent implements OnInit {
   public navIsFixed: boolean;
   public googleLinkPath: string;
   public temp;
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   /**
    * Lifecycle hook sets component public properties
@@ -30,15 +31,15 @@ export class AppComponent implements OnInit {
    * @param scroll event listener
    */
   @HostListener('window:scroll', ['$event'])
-    onWindowScroll($event) {
-      const number = $event.target.documentElement.scrollTop;
-      if (number > 90) {
-        this.navIsFixed = true;
-      }
-      else {
-        this.navIsFixed = false;
-     }
+  onWindowScroll($event) {
+    const number = $event.target.documentElement.scrollTop;
+    if (number > 90) {
+      this.navIsFixed = true;
     }
+    else {
+      this.navIsFixed = false;
+    }
+  }
 
   /**
    * Event Handler scrolls to selected menu content
@@ -63,10 +64,18 @@ export class AppComponent implements OnInit {
    * @param sideNav sidebar template reference
    * @param navMenu default template reference 
    */
-  closeNav(sideNav, navMenu) {
+  closeNav(sideNav, navMenu, path?) {
     sideNav.style.width = 0;
-    setTimeout(function () { navMenu.style.visibility = 'visible'; }, 800);
-
+    setTimeout(function(){
+      navMenu.style.visibility = 'visible'},800);
+    switch (path) {
+      case '/contact-us':
+        return this.router.navigate(['/contact-us'], { relativeTo: this.route });
+      case '/info':
+        return this.router.navigate([`/info`], { relativeTo: this.route });
+      case '/menu':
+        return this.router.navigate([`/menu`], { relativeTo: this.route });
+    }
   }
 }
 

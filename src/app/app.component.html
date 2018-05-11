@@ -4,10 +4,10 @@
   </header>
   <div #sideNav id="sideNav">
     <a class="closebtn" (click)="closeNav(sideNav, navMenu)">&times;</a>
-    <a routerLink="/menu">Menu</a>
+    <a (click)="closeNav(sideNav, navMenu,'/menu')" >Menu</a>
     <a (click)="googleLink()">Directions</a>
-    <a routerLink="/info">Info</a>
-    <a routerLink="/contact-us">Contact Us</a>
+    <a (click)="closeNav(sideNav, navMenu, '/info')" >Info</a>
+    <a (click)="closeNav(sideNav, navMenu, '/contact-us')" >Contact Us</a>
   </div>
 
   <nav #navMenu id="hamburger-nav" [ngClass]="{sticky: navIsFixed}" class="navbar navbar-inverse">

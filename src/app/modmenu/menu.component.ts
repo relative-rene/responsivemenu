@@ -6,7 +6,7 @@ import { DOCUMENT } from '@angular/platform-browser';
   templateUrl: './menu.component.html'
 })
 export class MenuComponent implements OnInit{
-  public NextPhotoInterval = 2000;
+  public NextPhotoInterval = 5000;
   public noLoopSlides = true;
   public slides: Array<any> = [];
 

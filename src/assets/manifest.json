@@ -19,7 +19,7 @@
         }
     ],
     "start_url":"/index.html",
-    "scope":".",
+    "scope":"/responsivemenu/",
     "display":"standalone",
     "description":"Restaurant progressive web app",
     "background_color": "#f0eceb",
