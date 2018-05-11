@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href https://relative-rene.github.io/responsivemenu/ && angular-cli-ghpages --branch gh-pages"   },
+    "deploy": "ng build --prod --base-href https://relative-rene.github.io/responsivemenu/ && angular-cli-ghpages --branch gh-pages"
+  },
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.0",

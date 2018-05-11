@@ -9,7 +9,9 @@ import { SmallDishesComponent } from './cmpsmall-dishes/small-dishes.component';
 import { CarouselComponent } from './cmpcarousel/carousel.component';
 import { SlideComponent } from './cmpcarousel/slide/slide.component';
 @NgModule({
-  imports:[MenuRoutingModule, CommonModule],
+  imports:[
+    MenuRoutingModule, 
+    CommonModule],
   declarations:[
     MenuComponent,
     SmallDishesComponent,

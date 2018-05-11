@@ -30,7 +30,7 @@ header#menu-title
 div.bkg-image 
 {
     position: relative;
-    background: no-repeat url('/assets/skyNwater.jpg');
+    background: no-repeat url('/assets/img/sea-sky.jpg');
     top: 0;
     border-bottom: 4em solid #283018;
     height: 100%; 

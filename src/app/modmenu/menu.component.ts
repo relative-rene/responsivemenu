@@ -6,7 +6,7 @@ import { DOCUMENT } from '@angular/platform-browser';
   templateUrl: './menu.component.html'
 })
 export class MenuComponent implements OnInit{
-  public NextPhotoInterval = 5000;
+  public NextPhotoInterval = 2000;
   public noLoopSlides = true;
   public slides: Array<any> = [];
 
@@ -21,14 +21,16 @@ export class MenuComponent implements OnInit{
 
   private addNewSlide() {
     this.slides.push(
-      { image: './assets/spammasubi.jpg', text: 'Spammasubi' },
-      { image: './assets/friedrolls.jpg', text: 'Fried Rolls' },
-      { image: './assets/prowaffle.jpg', text: 'Waffle Art' },
-      { image: './assets/gLatte.jpg', text: 'Green Latte' },
-      { image: './assets/gritsEggs.jpg', text: 'Bay shrimp and grits' },
-      { image: './assets/waffleChix.jpg', text: 'Chicken and Waffles' },
-      { image: './assets/latteArt.jpg', text: 'Latte' }
+      { image: './assets/img/latte-menu.jpg', text: 'Latte' },
+      { image: './assets/img/prowaffle.jpg', text: 'Amazing Waffles' },
+      { image: './assets/img/spammasubi.jpg', text: 'Spammasubi' },
+      { image: './assets/img/fried-rolls.jpg', text: 'Fried Rolls' },
+      { image: './assets/img/gLatte.jpg', text: 'Matcha Latte' },
+      { image: './assets/img/breakfast-grits.jpg', text: 'Bay shrimp and grits' },
+      { image: './assets/img/waffle-chicken.jpg', text: 'Chicken and Waffles' },
+      { image: './assets/img/busser-station.jpg', text: 'Cool View' },
+      { image: './assets/img/bay-shrimp-grits.jpg', text: 'Bay shrimp and grits' },
+      { image: './assets/img/avocado-toast-loks-shrimp-grits.jpg', text: 'Seasonal Changes' }
     );
   }
-
 }

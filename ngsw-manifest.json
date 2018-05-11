@@ -1,0 +1,46 @@
+{
+    "external":{
+        "urls":[
+            {"url":"https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css" },
+            {"url":"https://fonts.googleapis.com/css?family=Rock+Salt" }
+        ]
+    },
+    "static.ignore":[
+        "\\.js\\.map$"
+    ],
+    "dynamic":{
+        "group":[
+            {
+                "name":"map-location",
+                "urls": {
+                    "https://www.google.com/maps/dir//Neptune": {
+                        "match":"prefix"
+                    }
+                },
+                "cache": {
+                    "optimizeFor":"performance",
+                    "maxAgeMs":60000,
+                    "maxEntries":4
+                }
+            }
+        ]
+    },
+    "routing":{
+        "index":"/index.html",
+        "routes": {
+            "/": {
+                "prefix":false
+            },
+            "/menu": {
+                "prefix":true
+            },
+            "/info": {
+                "prefix":true
+            },
+            "/contact-us": {
+                "prefix":true
+            }
+
+        }
+    }
+}
