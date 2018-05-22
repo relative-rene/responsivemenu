@@ -1,0 +1,28 @@
+{
+    "name": "Neptunes Restaurant Angular 4 Progressive Web Apps",
+    "short_name":"NeptunesPWA",
+    "icons":[
+        {
+            "src":"/img/merman-32X32.jpg",
+            "type":"image/jpg",
+            "sizes":"32X32"
+        },
+        {
+            "src":"/img/merman-64X64.jpg",
+            "type":"image/jpg",
+            "sizes":"64X46"
+        },
+        {
+            "src":"/img/merman-128X128.jpg",
+            "type":"image/jpg",
+            "sizes":"128X128"
+        }
+    ],
+    "start_url":"/index.html",
+    "scope":"/responsivemenu/",
+    "display":"standalone",
+    "description":"Restaurant progressive web app",
+    "background_color": "#f0eceb",
+    "theme_color": "#aa863a"
+
+}

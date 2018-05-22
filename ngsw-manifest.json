@@ -1,0 +1,81 @@
+{
+  "external": {
+    "urls": [
+      {
+        "url": "https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css?family=Rock+Salt"
+      }
+    ]
+  },
+  "dynamic": {
+    "group": [
+      {
+        "name": "map-location",
+        "urls": {
+          "https://www.google.com/maps/dir//Neptune": {
+            "match": "prefix"
+          }
+        },
+        "cache": {
+          "optimizeFor": "performance",
+          "maxAgeMs": 60000,
+          "maxEntries": 4
+        }
+      }
+    ]
+  },
+  "routing": {
+    "index": "/index.html",
+    "routes": {
+      "/": {
+        "prefix": false
+      },
+      "/menu": {
+        "prefix": true
+      },
+      "/info": {
+        "prefix": true
+      },
+      "/contact-us": {
+        "prefix": true
+      }
+    }
+  },
+  "static": {
+    "urls": {
+      "https://relative-rene.github.io/responsivemenu/glyphicons-halflings-regular.f4769f9bdb7466be6508.eot": "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3",
+      "https://relative-rene.github.io/responsivemenu/glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf": "44bc1850f570972267b169ae18f1cb06b611ffa2",
+      "https://relative-rene.github.io/responsivemenu/glyphicons-halflings-regular.448c34a56d699c29117a.woff2": "ca35b697d99cae4d1b60f2d60fcd37771987eb07",
+      "https://relative-rene.github.io/responsivemenu/glyphicons-halflings-regular.89889688147bd7575d63.svg": "de51a8494180a6db074af2dee2383f0a363c5b08",
+      "https://relative-rene.github.io/responsivemenu/glyphicons-halflings-regular.fa2772327f55d8198301.woff": "278e49a86e634da6f2a02f3b47dd9d2a8f26210f",
+      "https://relative-rene.github.io/responsivemenu/polyfills.5889173ff1567209ef15.bundle.js": "19d58a89dec9a0bcf60cbdd899ee8e1a45f1fa0a",
+      "https://relative-rene.github.io/responsivemenu/main.76b2a2ee0d906f4f513d.bundle.js": "8732c0aa666cdd0099fb1e94b130abc328e9b1be",
+      "https://relative-rene.github.io/responsivemenu/sw-register.c3a9f56ebf829a0880d3.bundle.js": "6c5694fa18f55de662ff331e4d69d4521033fd80",
+      "https://relative-rene.github.io/responsivemenu/vendor.4be6769a4763e6ea7b66.bundle.js": "b073e7170532b3245316be05a7952d01389d5950",
+      "https://relative-rene.github.io/responsivemenu/inline.37a906f67844eeb62684.bundle.js": "d962f1d6efc4d0fdc0a971caca3d7b91efb8864f",
+      "https://relative-rene.github.io/responsivemenu/styles.ffb1c1e9087758b7cfc9.bundle.css": "1dab71d2162b489e7494e8436f8643ca0e9320b6",
+      "https://relative-rene.github.io/responsivemenu/assets/img/avocado-toast-loks-shrimp-grits.jpg": "497f839081bec88742d27bd8bab11a3cfe788599",
+      "https://relative-rene.github.io/responsivemenu/assets/img/bay-shrimp-grits.jpg": "36a0ccfc676c4627eedfd41f002c501dd639627f",
+      "https://relative-rene.github.io/responsivemenu/assets/img/breakfast-grits.jpg": "8febd9532b1a03a74786cd382c4aea444c5e612b",
+      "https://relative-rene.github.io/responsivemenu/assets/img/busser-station.jpg": "3d9edcbc3c71d1fc66dcbdfa0538f962a57a3458",
+      "https://relative-rene.github.io/responsivemenu/assets/img/fried-rolls.jpg": "5e61a55e8dbb54c600496dba6490ec86bf99847e",
+      "https://relative-rene.github.io/responsivemenu/assets/img/gLatte.jpg": "4c6812a709b16c3ac76d3d647f9647130d861efc",
+      "https://relative-rene.github.io/responsivemenu/assets/img/jasmineTest.png": "f1735e17c8743f7d31f62a5f37bd9eb7fa54fbf3",
+      "https://relative-rene.github.io/responsivemenu/assets/img/latte-menu.jpg": "c96f8e7a1a88294bc96da9fda6a5748024a1f11e",
+      "https://relative-rene.github.io/responsivemenu/assets/img/map.png": "d88633197c8f41b5137c05cbdd493a7c126de0d1",
+      "https://relative-rene.github.io/responsivemenu/assets/img/mermaid-icon-128X128.jpg": "990fc4e9e2a94f4e6c8623ddc173fd7f6fc4eb56",
+      "https://relative-rene.github.io/responsivemenu/assets/img/mermaid-icon-64X64.jpg": "85a054ef5114db1fa2ef9fb1cee0668f5a6b6a10",
+      "https://relative-rene.github.io/responsivemenu/assets/img/mermaid-icon-32X32.jpg": "77cf5ccae1233da83ade23052ffa6501e4c78453",
+      "https://relative-rene.github.io/responsivemenu/assets/img/prowaffle.jpg": "6a55af3b97bf7ded1bb02072a2ee9010926f3335",
+      "https://relative-rene.github.io/responsivemenu/assets/img/sea-sky.jpg": "13011c3d94b23e7387e3dc63d75f5aa3b0dc5f08",
+      "https://relative-rene.github.io/responsivemenu/assets/img/spammasubi.jpg": "e1e5914117f88c3b7ff6858e79c6ff3e627b48b7",
+      "https://relative-rene.github.io/responsivemenu/assets/img/waffle-chicken.jpg": "f38423b65fb839c15d20d7749ecfe1be47df83fc",
+      "https://relative-rene.github.io/responsivemenu/assets/manifest.json": "38d9da075d00189ae3f8d1fdbd9f4ad01e5c139d",
+      "https://relative-rene.github.io/responsivemenu/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+      "https://relative-rene.github.io/responsivemenu/index.html": "c0ea81bf9f4e5b6e660c988a6fbfbd9a7c74cca6"
+    },
+    "_generatedFromWebpack": true
+  }
+}
